@@ -1,10 +1,32 @@
 <?php
-//enhance in sprint 2
+//enhanced php 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $subject = $_POST['subject'] ?? '';
-    $message = $_POST['message'] ?? '';
+    //initialize variables and errors
+    $errors = [];
+    $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $subject = trim($_POST['subject'] ?? '');
+    $message = trim($_POST['message'] ?? '');
+
+    //server side validaiton
+    if (empty($name) || strlen($name) < 2) {
+        $errors[] = "Name must be at least 2 characters long";
+    }
+
+    //email
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Please enter a valid email address";
+    }
+
+    //subject
+    if (empty($subject) || strlen($subject) < 5) {
+        $errors[] = "Subject must be at least 5 characters long";
+    }
+
+    //message
+    if (empty($message) || strlen($message) < 10) {
+        $errors[] = "Message must be at least 10 characters long";
+    }
 
     //no actual email sending yet
     echo "<!DOCTYPE html>
