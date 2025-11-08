@@ -2,20 +2,250 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 /* HOME */
+#intro-hero {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 100px 20px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+        url('img/hero_img.jpg') center/cover no-repeat;
+    
+}
 
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 110px;
+    text-transform: uppercase;
+
+    font-family: Arial, Helvetica, sans-serif;
+}   
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.hero-content .btn {
+    background-color: #7A9B76;
+    color: #F3F6F3;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-content .btn:hover {
+    background-color: #698C69;
+    transform: translateY(-2px);
+}
 /* HOME */
 
 
 /* EVENTS */
 
+main section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Events container grid */
+main section > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual event card */
+article {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+article div {
+    padding: 20px;
+}
+
+article h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.event-date-time,
+.event-location {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
 /* EVENTS */
 
 
 
 /* CONTACT */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.btn {
+    padding: 12px 20px;
+    background-color: #7A9B76;
+    color: #F3F6F3;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #698C69;
+    transform: translateY(-2px);
+}
+
+
 
 /* CONTACT */
+
+/*FOOTER*/
+footer {
+    display: grid;
+    place-items: center;
+    color: #333;
+    width: 100%;
+    height: 60px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/*NAVBAR*/
+
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+.nav-container h1 {
+    margin: 0;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-container ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container ul li a.active {
+    font-weight: bold;
+}
