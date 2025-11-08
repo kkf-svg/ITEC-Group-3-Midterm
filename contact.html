@@ -98,6 +98,9 @@
     function clearErrors() {
         const errors = document.querySelectorAll('.error-message');
         errors.forEach(error => error.remove());
+
+        const inputs = docment.querySelectorAll('input, textarea');
+        inputs.forEach(input => input.style.borderColor = '#ddd');
     }
     </script>
 

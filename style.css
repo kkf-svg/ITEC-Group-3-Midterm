@@ -197,6 +197,24 @@ h2 {
 
 /* CONTACT */
 
+/*Validation styles*/
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #dc3545;
+}
+
+.form-group input:valid,
+.form-group textarea:valid {
+    border-color: #28a745;
+}
+
 /*FOOTER*/
 footer {
     display: grid;
