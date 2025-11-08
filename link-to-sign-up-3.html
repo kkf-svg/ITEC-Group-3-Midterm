@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Day Sign-Up</title>
+</head>
+<body>
+
+    <div>
+        <h1>Volunteer Day Sign-Up</h1>
+        <p style="text-align: center;">**Saturday, Dec 16 | 9:00 AM - 12:00 PM**</p>
+        <p style="text-align: center; color: #004d99;">Help us keep Nelson Mandela Park beautiful! Service hours provided.</p>
+        
+        <form action="#" method="POST">
+            
+            <div>
+                <label for="full-name">Full Name</label>
+                 <input type="text" id="full-name" name="full_name" required>
+            </div>
+
+            <div>
+                <label for="email">Campus Email</label>
+                <input type="email" id="email" name="email" placeholder="example@campus.edu" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone Number (Optional)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div>
+                <label>T-Shirt Size (Free shirts for volunteers!)</label>
+                <select id="shirt-size" name="shirt_size" required>
+                    <option value="" disabled selected>Select Your Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                    <option value="XL">Extra Large (XL)</option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Are you a current club member?</label>
+                <div>
+                    <input type="radio" id="member-yes" name="is_member" value="Yes" required>
+                    <label for="member-yes">Yes</label>
+                    
+                    <input type="radio" id="member-no" name="is_member" value="No">
+                    <label for="member-no">No</label>
+                </div>
+            </div>
+
+            <div>
+                <label>How many service hours are you tracking?</label>
+                <div>
+                    <input type="radio" id="hours-3" name="hours_tracking" value="3" required>
+                    <label for="hours-3">3 Hours (Full Event)</label>
+                    
+                    <input type="radio" id="hours-other" name="hours_tracking" value="Other">
+                    <label for="hours-other">Other / Not Tracking</label>
+                </div>
+            </div>
+
+            <button type="submit">Count Me In!</button>
+            
+            <p>A confirmation email with details will be sent within 24 hours.</p>
+
+        </form>
+    </div>
+
+</body>
+</html>

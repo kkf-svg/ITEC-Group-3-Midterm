@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Campus Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="img/favicon.png" alt="Campus Club Logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Contact Campus Club</h2>
+        <form action="contact.php" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5"" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById('contactform').addEventListener('submit', function(e) {
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+
+        //clear any errors
+        clearErrors();
+
+        //name validation
+        if (name.value.trim().length < 2) {
+            showError(name, 'Name must be at least 2 characters long');
+            isValid = false;
+        }
+
+        //email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+            showError(email, 'Please enter a valid email address');
+            isValid = false;
+        }
+
+        //subject
+        if (subject.value.trim().length < 5) {
+            showError(subject, 'Subject must be at least 5 characters long');
+            isValid = false;
+        }
+
+        //message
+        if (message.value.trim().length < 10) {
+            showError(message, 'Message must be at least 10 characters long');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            e.preventDefault();
+        }
+    });
+
+    function showError(input, message) {
+        const formGroup = input.parentElement;
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        formGroup.appendChild(errorDiv);
+        input.style.borderColor = '#dc3545';
+    }
+
+    function clearErrors() {
+        const errors = document.querySelectorAll('.error-message');
+        errors.forEach(error => error.remove());
+
+        const inputs = docment.querySelectorAll('input, textarea');
+        inputs.forEach(input => input.style.borderColor = '#ddd');
+    }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Campus Club. All rights reserved.</p>
+    </footer>
+</body>
+</html>
