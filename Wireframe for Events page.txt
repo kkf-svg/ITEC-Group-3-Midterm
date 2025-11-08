@@ -1,0 +1,32 @@
++-------------------------------------------------------------+
+| [------------------ HEADER BLOCK -----------------]          |
+| |              [ Club Name (H1) ]               |          |
+| |       Connecting the Campus Through Events      |          |
+| [------------------- NAV BAR ---------------------]          |
+| | [ Home ] [ Events ] [ About Us ] [ Contact ]   |          |
++-------------------------------------------------------------+
+|                                                             |
+|                   [ Container Max Width ]                   |
+|                                                             |
+|           == Upcoming Events (H2) =================         |
+|                                                             |
+|   +--------------+   +--------------+   +--------------+    |
+|   |  EVENT CARD 1  |   |  EVENT CARD 2  |   |  EVENT CARD 3  |
+|   |----------------|   |----------------|   |----------------|
+|   | [ Image Box ]  |   | [ Image Box ]  |   | [ Image Box ]  |
+|   |                |   |                |   |                |
+|   | **Event Title**|   | **Event Title**|   | **Event Title**|
+|   | 🗓️ Date & Time |   | 🗓️ Date & Time |   | 🗓️ Date & Time |
+|   | 📍 Location    |   | 📍 Location    |   | 📍 Location    |
+|   | Desc. Snippet  |   | Desc. Snippet  |   | Desc. Snippet  |
+|   | [ CTA Button ] |   | [ CTA Button ] |   | [ CTA Button ] |
+|   +--------------+   +--------------+   +--------------+    |
+|                                                             |
+|           =========================================         |
+|           == Past Events Highlights (H2) =========         |
+|           [ Link to gallery page or recap text ]            |
+|                                                             |
+| [-------------------- FOOTER ---------------------]          |
+| | &copy; 2024 [Club Name] | Follow us...           |          |
+| [-------------------------------------------------]          |
++-------------------------------------------------------------+
