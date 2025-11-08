@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Club - Upcoming Events</title>
+    <style>
+        /* Basic CSS for a clean, readable layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #004d99; /* Club Primary Color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #003366; /* Darker Club Color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Accent Color */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #004d99;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Event Card Styling */
+        .event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /* Placeholder for image */
+            background-color: #ddd; 
+        }
+
+        .event-details {
+            padding: 20px;
+        }
+
+        .event-details h3 {
+            color: #004d99;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .event-details p {
+            margin: 5px 0;
+        }
+
+        .event-date-time, .event-location {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffcc00; /* Accent Color */
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background-color: #e6b800;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav a {
+                display: block;
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Campus Club</h1>
+        <p>Connecting the Campus Through Events</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="container">
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            
+           
+        </section>
+        
+        <hr>
+
+        <section id="past-events">
+             <h2>Past Events Highlights</h2>
+             <p style="text-align: center;">Check out photos and recaps from our recent activities!</p>
+             </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Campus Club | Follow us on <a href="#" style="color: #ffcc00;">Social Media</a></p>
+    </footer>
+
+    <script>
+        // Simple JavaScript to auto-update the copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
