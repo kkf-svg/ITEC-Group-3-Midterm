@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //no actual email sending yet
     echo "<h2>Thank You, $name!</h2>";
-    echo "<p>We have recieved our message and will get back to you soon.</p>";
+    echo "<p>We have recieved your message and will get back to you soon.</p>";
     echo "<p><strong>Subject:</strong> $subject</p>";
     echo "<p><a href='contact.html'>Send another message</a></p>";
 } else {
