@@ -14,14 +14,14 @@
     color: #fff;
     padding: 100px 20px;
     background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)),
         url('img/hero_img.jpg') center/cover no-repeat;
     
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 110px;
+    margin-bottom: 40px;
     text-transform: uppercase;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -29,7 +29,7 @@
 
 .hero-content h2 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: 400;
     color: #fff;
 }
@@ -37,8 +37,8 @@
 .hero-content p {
     font-size: 1.1rem;
     max-width: 700px;
-    margin: 0 auto 30px;
     line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .hero-content .btn {
@@ -78,14 +78,12 @@ h2 {
     color: #333;
 }
 
-/* Events container grid */
 main section > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* Individual event card */
 article {
     background-color: #fff;
     border-radius: 12px;
@@ -219,15 +217,18 @@ nav {
 
 .nav-container {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px 10px;
+    gap: 20px;
 }
 
-.nav-container h1 {
-    margin: 0;
+.nav-container .logo img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .nav-container ul {
@@ -236,6 +237,7 @@ nav {
     gap: 20px;
     padding: 0;
     margin: 0;
+    justify-content: flex-end;
 
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
