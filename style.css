@@ -78,14 +78,12 @@ h2 {
     color: #333;
 }
 
-/* Events container grid */
 main section > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* Individual event card */
 article {
     background-color: #fff;
     border-radius: 12px;
