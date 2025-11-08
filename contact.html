@@ -45,6 +45,65 @@
         </form>
     </main>
 
+    <script>
+        document.getElementById('contactform').addEventListener('submit', function(e) {
+            let isValid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+
+        //clear any errors
+        clearErrors();
+
+        //name validation
+        if (name.value.trim().length < 2) {
+            showError(name, 'Name must be at least 2 characters long');
+            isValid = false;
+        }
+
+        //email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+            showError(email, 'Please enter a valid email address');
+            isValid = false;
+        }
+
+        //subject
+        if (subject.value.trim().length < 5) {
+            showError(subject, 'Subject must be at least 5 characters long');
+            isValid = false;
+        }
+
+        //message
+        if (message.value.trim().length < 10) {
+            showError(message, 'Message must be at least 10 characters long');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            e.preventDefault();
+        }
+    });
+
+    function showError(input, message) {
+        const formGroup = input.parentElement;
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        formGroup.appendChild(errorDiv);
+        input.style.borderColor = '#dc3545';
+    }
+
+    function clearErrors() {
+        const errors = document.querySelectorAll('.error-message');
+        errors.forEach(error => error.remove());
+
+        const inputs = docment.querySelectorAll('input, textarea');
+        inputs.forEach(input => input.style.borderColor = '#ddd');
+    }
+    </script>
+
     <footer>
         <p>&copy; 2025 Campus Club. All rights reserved.</p>
     </footer>
