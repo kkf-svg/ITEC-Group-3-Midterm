@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Registration</title>
+</head>
+<body>
+
+    <h1>Workshop Registration: Intro to Web Design</h1>
+    <p>🗓️ Wednesday, Dec 6 | 4:30 PM - 6:00 PM</p>
+    <p>📍 City Campus, Lab 1</p>
+    <p>Space is limited! Register now to secure your spot for this hands-on workshop.</p>
+    
+    <form action="#" method="POST">
+        
+        <fieldset>
+            <legend>Required Information</legend>
+            
+            <div>
+                <label for="reg-name">Full Name:</label>
+                <input type="text" id="reg-name" name="reg_name" required>
+            </div>
+            
+            <br>
+            
+            <div>
+                <label for="reg-email">Campus Email:</label>
+                <input type="email" id="reg-email" name="reg_email" placeholder="example@campus.edu" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="major">Major / Area of Study:</label>
+                <input type="text" id="major" name="major" required>
+            </div>
+        </fieldset>
+        
+        <br>
+
+        <fieldset>
+            <legend>Workshop Logistics</legend>
+            
+            <div>
+                <label>Will you bring your own laptop?</label><br>
+                <input type="radio" id="laptop-yes" name="laptop_status" value="Yes" required>
+                <label for="laptop-yes">Yes, I will bring my laptop.</label><br>
+                <input type="radio" id="laptop-no" name="laptop_status" value="No">
+                <label for="laptop-no">No, I need to borrow a club laptop.</label>
+            </div>
+            
+            <br>
+            
+            <div>
+                <label>What is your current experience level with coding?</label><br>
+                <input type="radio" id="exp-none" name="experience" value="None" required>
+                <label for="exp-none">None/Beginner</label><br>
+                <input type="radio" id="exp-some" name="experience" value="Some">
+                <label for="exp-some">Some HTML/CSS exposure</label><br>
+                <input type="radio" id="exp-advanced" name="experience" value="Advanced">
+                <label for="exp-advanced">Proficient in another language (e.g., Python)</label>
+            </div>
+        </fieldset>
+
+        <br>
+        
+        <button type="submit">Register for Workshop</button>
+        
+    </form>
+
+</body>
+</html>
