@@ -4,142 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Club - Upcoming Events</title>
-    <style>
-        /* Basic CSS for a clean, readable layout */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-
-        header {
-            background-color: #004d99; /* Club Primary Color */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            background-color: #003366; /* Darker Club Color */
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ffcc00; /* Accent Color */
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        h2 {
-            color: #004d99;
-            border-bottom: 2px solid #004d99;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        /* Event Card Styling */
-        .event-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .event-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .event-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .event-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            /* Placeholder for image */
-            background-color: #ddd; 
-        }
-
-        .event-details {
-            padding: 20px;
-        }
-
-        .event-details h3 {
-            color: #004d99;
-            margin-top: 0;
-            font-size: 1.5em;
-        }
-
-        .event-details p {
-            margin: 5px 0;
-        }
-
-        .event-date-time, .event-location {
-            font-weight: bold;
-            color: #555;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #ffcc00; /* Accent Color */
-            color: #333;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .cta-button:hover {
-            background-color: #e6b800;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            background-color: #333;
-            color: white;
-            font-size: 0.9em;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-            nav a {
-                display: block;
-                padding: 5px 0;
-            }
-        }
-    </style>
+   
 </head>
 <body>
 
@@ -154,42 +19,42 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <main class="container">
-        <section id="upcoming-events">
+    <main>
+        <section>
             <h2>Upcoming Events</h2>
             
-            <div class="event-list">
+            <div>
                 
-                <article class="event-card">
-                    <img src="placeholder-event-1.jpg" alt="Event 1 Image" class="event-image">
-                    <div class="event-details">
+                <article>
+                    <img src="placeholder-event-1.jpg" alt="Event 1 Image">
+                    <div>
                         <h3>Club Kickoff Social</h3>
                         <p class="event-date-time">🗓️ Saturday, Nov 25 | 6:00 PM - 8:00 PM</p>
                         <p class="event-location">📍 South Campus</p>
                         <p>Join us for free pizza, games, and a chance to meet other members and the club leadership!</p>
-                        <a href="link-to-event-details-1.html" class="cta-button">RSVP Now</a>
+                     
                     </div>
                 </article>
 
-                <article class="event-card">
-                    <img src="placeholder-event-2.jpg" alt="Event 2 Image" class="event-image">
-                    <div class="event-details">
+                <article>
+                    <img src="placeholder-event-2.jpg" alt="Event 2 Image">
+                    <div>
                         <h3>Workshop: Intro to Web Design</h3>
                         <p class="event-date-time">🗓️ Wednesday, Dec 6 | 4:30 PM - 6:00 PM</p>
                         <p class="event-location">📍 City Campus, Lab 1</p>
                         <p>Learn the basics of HTML and CSS to build your first website. Laptops recommended!</p>
-                        <a href="link-to-event-details-2.html" class="cta-button">View Details</a>
+              
                     </div>
                 </article>
                 
-                <article class="event-card">
-                    <img src="placeholder-event-3.jpg" alt="Event 3 Image" class="event-image">
-                    <div class="event-details">
+                <article>
+                    <img src="placeholder-event-3.jpg" alt="Event 3 Image">
+                    <div>
                         <h3>Volunteer Day at Local Park</h3>
                         <p class="event-date-time">🗓️ Saturday, Dec 16 | 9:00 AM - 12:00 PM</p>
                         <p class="event-location">📍 Nelson Mandela Park (Meet at playground)</p>
                         <p>Help us clean up the local community park. Service hours provided. Free t-shirts!</p>
-                        <a href="link-to-sign-up-3.html" class="cta-button">Sign Up</a>
+              
                     </div>
                 </article>
 
@@ -198,7 +63,7 @@
         
         <hr>
 
-        <section id="past-events">
+        <section>
              <h2>Past Events Highlights</h2>
              <p style="text-align: center;">Check out photos and recaps from our recent activities!</p>
              </section>
