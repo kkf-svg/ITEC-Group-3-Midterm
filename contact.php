@@ -88,6 +88,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 function displayErrorPage($errors) {
-    $errorLsit
+    $errorList = implode('', array_map(function($error) {
+        return "<li>$error</li>";
+    }, $errors));
+
+    echo "<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Validation Error - Campus Club</title>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <nav>
+            <div class='nav-container'>
+                <h1>Campus Club</h1>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='events.html'>Events</a></li>
+                    <li><a href='contact.html'>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class='container'>
+            <div class='confirmation-message error'>
+                <h2>⚠ Please Fix the Following Errors:</h2>
+                <ul class='error-list'>$errorList</ul>
+                <div class='button-group'>
+                    <a href='contact.html' class='btn'>Go Back to Form</a>
+                    <a href='index.html' class='btn btn-secondary'>Back to Home</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Campus Club. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>"; 
 }
 ?>
