@@ -1,5 +1,5 @@
 <?php
-// Prevent direct access without form submission
+//stop direct access without form submission
 if (empty($_POST) && $_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: contact.html");
     exit();
